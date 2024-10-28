@@ -8,6 +8,7 @@
   align-items: center;
   padding: 20px 50px;
   z-index: 2;
+  pointer-events: auto;
 }
 
 .logo-container {
@@ -141,7 +142,7 @@
 }
 
 /* Mobile styles */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1400px) {
   .menu-toggle {
     display: block;
   }

@@ -8,6 +8,7 @@ const HeroSection = () => {
   const [activeTab, setActiveTab] = useState('Home'); // Default to 'Home' to show initial content
 
   const handleTabClick = (tabName) => {
+    console.log(`Tab clicked: ${tabName}`);
     setActiveTab(tabName);
   };
 

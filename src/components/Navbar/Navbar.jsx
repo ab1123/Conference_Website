@@ -13,6 +13,12 @@ const Navbar = ({ onTabClick }) => {
     setIsOpen(!isOpen);
   };
 
+  const handleClick = (e, tabName) => {
+    e.stopPropagation(); // Prevent event from bubbling
+    onTabClick(tabName);
+    setIsOpen(false); // Close the menu after clicking
+  };
+
   return (
     <nav className="navbar">
       <div className="logo-container">
@@ -20,8 +26,8 @@ const Navbar = ({ onTabClick }) => {
         <img src={nitLogo} alt="NIT Logo" className="logo" />
         <img src={mrsiLogo} alt="MRSI Logo" className="logo" />
       </div>
-      <button 
-        className="menu-toggle" 
+      <button
+        className="menu-toggle"
         onClick={toggleNavbar}
         aria-label="Toggle navigation"
       >
@@ -33,15 +39,15 @@ const Navbar = ({ onTabClick }) => {
       </button>
 
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-        <Link to="/" onClick={() => { onTabClick('Home'); setIsOpen(false); }}>Home</Link>
-        <Link to="/about" onClick={() => { onTabClick('About'); setIsOpen(false); }}>About</Link>
-        <Link to="/dates" onClick={() => { onTabClick('Important Dates'); setIsOpen(false); }}>Important Dates</Link>
-        <Link to="/registration" onClick={() => { onTabClick('Registrations'); setIsOpen(false); }}>Registrations</Link>
-        <Link to="/submission" onClick={() => { onTabClick('Submission'); setIsOpen(false); }}>Paper Submission</Link>
-        <Link to="/team" onClick={() => { onTabClick('Team'); setIsOpen(false); }}>Organizing Committee</Link>
-        <Link to="/advisory" onClick={() => { onTabClick('Advisory'); setIsOpen(false); }}>National Advisory</Link>
-        <Link to="/speakers" onClick={() => { onTabClick('Speakers'); setIsOpen(false); }}>Speakers</Link>
-        <Link to="/contact" onClick={() => { onTabClick('Contact'); setIsOpen(false); }}>Contact Us</Link>
+        <Link to="/" onClick={(e) => handleClick(e, 'Home')}>Home</Link>
+        <Link to="/about" onClick={(e) => handleClick(e, 'About')}>About</Link>
+        <Link to="/dates" onClick={(e) => handleClick(e, 'Important Dates')}>Important Dates</Link>
+        <Link to="/registration" onClick={(e) => handleClick(e, 'Registrations')}>Registrations</Link>
+        <Link to="/submission" onClick={(e) => handleClick(e, 'Submission')}>Paper Submission</Link>
+        <Link to="/team" onClick={(e) => handleClick(e, 'Team')}>Organizing Committee</Link>
+        <Link to="/advisory" onClick={(e) => handleClick(e, 'Advisory')}>National Advisory</Link>
+        <Link to="/speakers" onClick={(e) => handleClick(e, 'Speakers')}>Speakers</Link>
+        <Link to="/contact" onClick={(e) => handleClick(e, 'Contact')}>Contact Us</Link>
       </div>
     </nav>
   );
