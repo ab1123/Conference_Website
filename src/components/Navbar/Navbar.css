@@ -18,10 +18,10 @@
 
 .logo {
   height: 70px;
+  width: auto;
 }
 
-/* Default nav-links (desktop view) */
-.nav-links {
+/* .nav-links {
   display: flex;
   list-style: none;
   gap: 20px;
@@ -39,7 +39,6 @@
   color: #f1c40f;
 }
 
-/* Hamburger Button */
 .navbar-toggle {
   display: none;
   flex-direction: column;
@@ -54,7 +53,7 @@
   transition: 0.3s;
 }
 
-/* For active state of hamburger */
+
 .hamburger.active:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -65,7 +64,6 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -85,4 +83,112 @@
   .navbar-toggle {
     display: flex;
   }
+} */
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+/* Transition for mobile menu */
+.menu-toggle {
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle.active {
+  transform: rotate(180deg);
+}
+
+/* Ensure the mobile menu doesn't cause horizontal scrolling */
+body {
+  overflow-x: hidden;
 }

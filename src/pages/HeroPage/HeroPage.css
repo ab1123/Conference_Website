@@ -36,7 +36,7 @@
 
 .hero-content h3 {
   font-size: 2rem;
-  margin:10px;
+  margin: 10px;
 }
 
 .hero-content h1 {
@@ -60,47 +60,33 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.organized-by, .association-with {
+.organized-by,
+.association-with {
   font-size: 1.3rem;
   margin-bottom: 10px;
   color: #f1c40f;
 }
 
-.organized-by span, .association-with span {
+.organized-by span,
+.association-with span {
   color: #fff;
 }
+
 .date {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.publication-info {
-  font-size: 1.2rem;
-  margin-top: 20px;
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0 0;
 }
 
-.brochure-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.brochure-link:hover {
-  background-color: #2980b9;
-}
-
-.new h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 20px 0;
-}
-
-.new p {
-  font-size: 1.2rem;
-  padding: 10px 0;
+@media screen and (max-width: 425px) {
+  .main {
+    width: 100%;
+    background-color: #f1c40f;
+  }
 }

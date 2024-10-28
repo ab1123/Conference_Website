@@ -16,22 +16,24 @@ const HeroSection = () => {
       case 'Home':
         return (
           <>
-            <h3 className='top'>6th National Conference</h3>
-            <h3>On</h3>
-            <h1>RECENT ADVANCEMENT IN PHYSICAL SCIENCES</h1>
-            <div className="center-img-container">
-              <img src={NCRAPS} alt="NCRAPS Logo" className="center-img" />
+            <div className='main'>
+              <h3 className='top'>6th National Conference</h3>
+              <h3>On</h3>
+              <h1>RECENT ADVANCEMENT IN PHYSICAL SCIENCES</h1>
+              <div className="center-img-container">
+                <img src={NCRAPS} alt="NCRAPS Logo" className="center-img" />
+              </div>
+              <p className="organized-by">
+                <span>jointly organized by</span> <br />
+                School of Physical Sciences, DIT University, Dehradun<br />
+                National Institute of Technology, Uttarakhand
+              </p>
+              <p className='association-with'>
+                <span>In association with</span><br />
+                MRSI, Delhi Chapter
+              </p>
+              <p className="date">14 – 15 February 2025</p>
             </div>
-            <p className="organized-by">
-              <span>jointly organized by</span> <br />
-              School of Physical Sciences, DIT University, Dehradun<br />
-              National Institute of Technology, Uttarakhand
-            </p>
-            <p className='association-with'>
-              <span>In association with</span><br />
-              MRSI, Delhi Chapter
-            </p>
-            <p className="date">14 – 15 February 2025</p>
           </>
         );
       case 'About':
@@ -60,7 +62,7 @@ const HeroSection = () => {
       <Navbar onTabClick={handleTabClick} />
       <section className="hero">
         <div className="hero-content">
-          {renderContent()} {}
+          {renderContent()} { }
         </div>
       </section>
       {/* <section className='new'>
