@@ -1,26 +1,4 @@
-/* Navbar Styles */
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  z-index: 2;
-  pointer-events: auto;
-}
 
-.logo-container {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.logo {
-  height: 70px;
-  width: auto;
-}
 
 /* .nav-links {
   display: flex;
