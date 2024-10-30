@@ -35,7 +35,9 @@
 
 .tabs p {
   font-size: 1.3rem;
-  justify-content: center;
+  justify-content: justify;
+  text-align: justify;
+
 }
 
 .conference-topics {
