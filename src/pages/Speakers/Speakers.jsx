@@ -1,7 +1,8 @@
 import React from 'react';
-import "./Speakers.css";
+import './Speakers.css';
 import HeroSection from '../HeroPage/HeroPage';
 import Footer from '../../components/Footer/Footer';
+import Navbar from '../../components/Navbar/Navbar';
 
 const Speakers = () => {
   const speakers = [
@@ -39,7 +40,7 @@ const Speakers = () => {
     'Dr. Pankaj Kumar Mishra, CUSB, Gaya',
     'Dr. Haredra Singh, P.G. College, Gazipur, U.P.',
     'Dr. Ratnesh Kumar Mishra, NIT Jamshedpur',
-    'Dr. Amit Singh, REC, Ambedkar Nagar, U.P.'
+    'Dr. Amit Singh, REC, Ambedkar Nagar, U.P.',
   ];
 
   const half = Math.ceil(speakers.length / 2);
@@ -48,7 +49,8 @@ const Speakers = () => {
 
   return (
     <>
-      <HeroSection />
+      <Navbar />
+      {/* <HeroSection /> */}
       <section className="speakers">
         <h1>Speakers</h1>
         <div className="speakers-container">

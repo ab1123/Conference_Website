@@ -6,7 +6,7 @@ import mrsiLogo from '../../assets/images/newLogo.png';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-const Navbar = ({ onTabClick }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -15,7 +15,7 @@ const Navbar = ({ onTabClick }) => {
 
   const handleClick = (e, tabName) => {
     e.stopPropagation(); // Prevent event from bubbling
-    onTabClick(tabName);
+    // onTabClick(tabName);
     setIsOpen(false); // Close the menu after clicking
   };
 
@@ -31,23 +31,40 @@ const Navbar = ({ onTabClick }) => {
         onClick={toggleNavbar}
         aria-label="Toggle navigation"
       >
-        {isOpen ? (
-          <X className="menu-icon" />
-        ) : (
-          <Menu className="menu-icon" />
-        )}
+        {isOpen ? <X className="menu-icon" /> : <Menu className="menu-icon" />}
       </button>
 
       <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-        <Link to="/" onClick={(e) => handleClick(e, 'Home')}>Home</Link>
-        <Link to="/about" onClick={(e) => handleClick(e, 'About')}>About</Link>
-        <Link to="/dates" onClick={(e) => handleClick(e, 'Important Dates')}>Important Dates</Link>
-        <Link to="/registration" onClick={(e) => handleClick(e, 'Registrations')}>Registrations</Link>
-        <Link to="/submission" onClick={(e) => handleClick(e, 'Submission')}>Paper Submission</Link>
-        <Link to="/team" onClick={(e) => handleClick(e, 'Team')}>Organizing Committee</Link>
-        <Link to="/advisory" onClick={(e) => handleClick(e, 'Advisory')}>National Advisory</Link>
-        <Link to="/speakers" onClick={(e) => handleClick(e, 'Speakers')}>Speakers</Link>
-        <Link to="/contact" onClick={(e) => handleClick(e, 'Contact')}>Contact Us</Link>
+        <Link to="/" onClick={(e) => handleClick(e, 'Home')}>
+          Home
+        </Link>
+        <Link to="/about" onClick={(e) => handleClick(e, 'About')}>
+          About
+        </Link>
+        <Link to="/dates" onClick={(e) => handleClick(e, 'Important Dates')}>
+          Important Dates
+        </Link>
+        <Link
+          to="/registration"
+          onClick={(e) => handleClick(e, 'Registrations')}
+        >
+          Registrations
+        </Link>
+        <Link to="/submission" onClick={(e) => handleClick(e, 'Submission')}>
+          Paper Submission
+        </Link>
+        <Link to="/team" onClick={(e) => handleClick(e, 'Team')}>
+          Organizing Committee
+        </Link>
+        <Link to="/advisory" onClick={(e) => handleClick(e, 'Advisory')}>
+          National Advisory
+        </Link>
+        <Link to="/speakers" onClick={(e) => handleClick(e, 'Speakers')}>
+          Speakers
+        </Link>
+        <Link to="/contact" onClick={(e) => handleClick(e, 'Contact')}>
+          Contact Us
+        </Link>
       </div>
     </nav>
   );

@@ -5,7 +5,7 @@ section {
 }
 
 .team {
-  padding: 20px 100px;
+  padding: 100px 100px;
 }
 
 .main-cnt {
@@ -38,7 +38,6 @@ section {
 .team-sections ul {
   display: flex;
   flex-direction: column;
-
 }
 
 .team-sections .inner-section {
@@ -68,5 +67,5 @@ section {
 @media screen and (max-width: 760px) {
   .main-cnt {
     display: block;
-  }  
+  }
 }

@@ -1,5 +1,5 @@
 .registration {
-  padding: 20px 100px;
+  padding: 105px 100px;
 }
 
 .registration h1 {
@@ -17,7 +17,7 @@
   margin: 20px 0;
 }
 
-.registration h3  a {
+.registration h3 a {
   color: #3072dd;
 }
 
@@ -94,7 +94,8 @@
     width: 90%;
   }
 
-  .bank-details-table th, .bank-details-table td {
+  .bank-details-table th,
+  .bank-details-table td {
     font-size: 0.9rem;
     padding: 0.5rem;
   }

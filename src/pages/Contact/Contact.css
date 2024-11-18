@@ -5,7 +5,7 @@ section {
 }
 
 .contact {
-  padding: 20px 100px;
+  padding: 170px 100px;
 }
 
 .contact h1 {
@@ -42,7 +42,7 @@ section {
 }
 
 .email-link {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }

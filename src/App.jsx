@@ -8,11 +8,11 @@ import Speakers from './pages/Speakers/Speakers';
 import Submission from './pages/Submission/Submission';
 import Registration from './pages/Registartion/Resgistration';
 import Team from './pages/Team/Team';
-import Advisory from "./pages/Advisory/Advisory";
+import Advisory from './pages/Advisory/Advisory';
 import Contact from './pages/Contact/Contact';
 import './App.css';
 import HeroSection from './pages/HeroPage/HeroPage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (

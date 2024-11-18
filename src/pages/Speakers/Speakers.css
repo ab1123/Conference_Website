@@ -5,7 +5,7 @@ section {
 }
 
 .speakers {
-  padding: 20px 100px;
+  padding: 100px 100px;
   text-align: center;
 }
 
@@ -37,9 +37,9 @@ section {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .speakers-container {
-      flex-direction: column;
+    flex-direction: column;
   }
   .speakers-column {
-      width: 100%; /* Full width on small screens */
+    width: 100%; /* Full width on small screens */
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css';
-import ditlogo from "../../assets/images/dit.jpg";
-import nitlogo from "../../assets/images/nit.png";
-import mrsilogo from "../../assets/images/MRSI-Logo.png";
-import ncrasps from "../../assets/images/NCRAPSLogo.jpeg";
+import ditlogo from '../../assets/images/dit.jpg';
+import nitlogo from '../../assets/images/nit.png';
+import mrsilogo from '../../assets/images/MRSI-Logo.png';
+import ncrasps from '../../assets/images/NCRAPSLogo.jpeg';
 
 const Footer = () => {
   return (
